@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation-2</title>
+    <style>
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 300px;
+        }
+      }
+      @keyframes mymove2 {
+        from {
+          left: 1020px;
+        }
+        to {
+          left: 690px;
+        }
+      }
+      .box {
+        height: 100px;
+        width: 400px;
+        background-color: bisque;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .even {
+        background: linear-gradient(to left, #000f6d 0%, #00c3ff 100%);
+        position: relative;
+        left: 74%;
+        animation: mymove2 2s infinite;
+        animation-fill-mode: forwards;
+      }
+      .odd {
+        background: linear-gradient(to right, #000f6d 0%, #00c3ff 100%);
+        position: relative;
+        left: -1%;
+        animation: mymove 2s infinite;
+        animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box odd">box1</div>
+    <div class="box even">box2</div>
+    <div class="box odd">box3</div>
+    <div class="box even">box4</div>
+  </body>
+</html>
